@@ -1,0 +1,162 @@
+{
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "noflo-browser",
+            "content": "Test system"
+        },
+        "description": "TEST1",
+        "icon": ""
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "test1/Potato2_v4m7l": {
+            "component": "test1/Potato2",
+            "metadata": {
+                "label": "test1/Potato2",
+                "x": -900,
+                "y": -1116,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "test1/Garden_7oq85": {
+            "component": "test1/Garden",
+            "metadata": {
+                "label": "test1/Garden",
+                "x": -756,
+                "y": -972,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "test1/Potato1_xokab": {
+            "component": "test1/Potato1",
+            "metadata": {
+                "label": "test1/Potato1",
+                "x": -1044,
+                "y": -936,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "test1/Potato1_gepda": {
+            "component": "test1/Potato1",
+            "metadata": {
+                "label": "test1/Potato1",
+                "x": -900,
+                "y": -792,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "test1/Potato1_xokab",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "test1/Garden_7oq85",
+                "port": "in1"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "test1/Potato1_xokab",
+                "port": "in3"
+            },
+            "tgt": {
+                "process": "test1/Potato1_gepda",
+                "port": "in3"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "test1/Potato1_gepda",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "test1/Garden_7oq85",
+                "port": "in2"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "test1/Potato1_xokab",
+                "port": "in3"
+            },
+            "tgt": {
+                "process": "test1/Potato2_v4m7l",
+                "port": "in3"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "data": "40",
+            "tgt": {
+                "process": "test1/Garden_7oq85",
+                "port": "c4"
+            }
+        },
+        {
+            "data": "[1,2,3]",
+            "tgt": {
+                "process": "test1/Potato1_xokab",
+                "port": "in3"
+            }
+        },
+        {
+            "data": "[41,51,61]",
+            "tgt": {
+                "process": "test1/Potato1_xokab",
+                "port": "in2"
+            }
+        },
+        {
+            "data": "[12,22,32]",
+            "tgt": {
+                "process": "test1/Potato2_v4m7l",
+                "port": "in1"
+            }
+        },
+        {
+            "data": "[42,52,62]",
+            "tgt": {
+                "process": "test1/Potato2_v4m7l",
+                "port": "in2"
+            }
+        },
+        {
+            "data": "[42,52,62]",
+            "tgt": {
+                "process": "test1/Potato1_gepda",
+                "port": "in2"
+            }
+        },
+        {
+            "data": "[12,22,32]",
+            "tgt": {
+                "process": "test1/Potato1_gepda",
+                "port": "in1"
+            }
+        },
+        {
+            "data": "[11,21,31]",
+            "tgt": {
+                "process": "test1/Potato1_xokab",
+                "port": "in1"
+            }
+        }
+    ]
+}
